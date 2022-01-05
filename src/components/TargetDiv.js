@@ -2,18 +2,12 @@ import React, { Component } from 'react';
 
 class TargetDiv extends Component {
 
-  constructor(props) {
-    super(props);
-    this.state = {
-      message: props.message
-    }
-  }
-
   render() {
     return (
-        <div>{this.state.message}</div>
+        <div>{this.props.text}</div>
     );
   }
+
 }
 
 export default TargetDiv;

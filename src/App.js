@@ -10,36 +10,35 @@ const szoveg = [
   "ige."
 ]
 
-// const changeTargetText = () => {
-//   console.log("yes");
-// }
-
 class App extends Component {
+	constructor(props) {
+		super(props);
+		this.state = {
+			text: "",
+      pointer: 0
+		};
+		this.handleChange = this.handleChange.bind(this);
+	}
 
-  constructor(props) {
-    super(props);
-    this.state = {
-      message: "Kattincs",
-			pointer: 0
-    };
-    this.changeText = this.changeTargetText.bind(this);
-  }
-
-  changeTargetText() {
-    console.log("yes");
+	handleChange() {
+    if (this.state.pointer < szoveg.length-1) {
+			this.setState({pointer: this.state.pointer + 1});
+		} else {
+			this.setState({pointer: 0});
+		}
+    this.setState({text: szoveg[this.state.pointer]});
   }
 
   render() {
     return (
-      <div className="App">
-        <header className="App-header">
-          <Button message={szoveg[0]} onClick={this.changeTargetText} />
-          <TargetDiv message={szoveg[0]} />
-        </header>
-      </div>
-    );
+    <div className="App">
+      <header className="App-header">
+        <Button label="Click me!" handleChange={this.handleChange} />
+        <TargetDiv text={this.state.text} />
+      </header>
+    </div>
+    )
   }
 }
-
 
 export default App;
