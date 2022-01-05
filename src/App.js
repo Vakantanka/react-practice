@@ -10,9 +10,9 @@ const szoveg = [
   "ige."
 ]
 
-const changeTargetText = () => {
-  console.log("yes");
-}
+// const changeTargetText = () => {
+//   console.log("yes");
+// }
 
 class App extends Component {
 
@@ -23,6 +23,10 @@ class App extends Component {
 			pointer: 0
     };
     this.changeText = this.changeTargetText.bind(this);
+  }
+
+  changeTargetText() {
+    console.log("yes");
   }
 
   render() {
