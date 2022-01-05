@@ -7,7 +7,7 @@ const szoveg = [
   "Kezdetben",
   "vala",
   "az",
-  "ige."
+  "React"
 ]
 
 class App extends Component {
