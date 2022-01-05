@@ -5,7 +5,7 @@ class Button extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      label: "Kattincs",
+      label: props.message,
 			pointer: 0
     };
     this.changeText = this.changeText.bind(this);
@@ -26,7 +26,7 @@ class Button extends Component {
 	
 	render() {
 		return (
-			<button onClick={this.changeText}>{this.state.label}</button>
+			<button>{this.state.label}</button>
 		);
 	}
 

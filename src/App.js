@@ -33,7 +33,7 @@ class App extends Component {
     return (
       <div className="App">
         <header className="App-header">
-          <Button message={szoveg} />
+          <Button message={szoveg[0]} onClick={this.changeTargetText} />
           <TargetDiv message={szoveg[0]} />
         </header>
       </div>
