@@ -1,54 +1,29 @@
-import React, {Component} from 'react';
 import './App.css';
-import Button from './components/Button';
-import TargetDiv from './components/TargetDiv';
-import TargetDivWithMap from './components/TargetDivWithMap';
-import Profile from './components/Profile';
-import Profile2 from './components/Profile2';
-import Profile3 from './components/Profile3';
-import Profile4 from './components/Profile4';
+import ButtonWithClass from './components/ButtonWithClass';
+import ButtonWithHook from './components/ButtonWithHook';
 
-const szoveg = [
-  "Kezdetben",
-  "vala",
-  "az",
-  "React"
-]
+/*
+const obj1 = {
+  key1: "random stuff",
+  key2: obj3
+}
 
-class App extends Component {
-	constructor(props) {
-		super(props);
-		this.state = {
-			text: "",
-      pointer: 0
-		};
-		this.handleChange = this.handleChange.bind(this);
-	}
+const obj2 = {
+  key1: "random stuff 2",
+  key2: obj3
+}
 
-	handleChange() {
-    if (this.state.pointer < szoveg.length-1) {
-			this.setState({pointer: this.state.pointer + 1});
-		} else {
-			this.setState({pointer: 0});
-		}
-    this.setState({text: szoveg[this.state.pointer]});
-  }
-
-  render() {
-    return (
+const obj3 = {
+  key1: "random stuff 3"
+}
+*/
+function App() {
+  return (
     <div className="App">
-      <header className="App-header">
-        <Profile4 />
-        <Button label="Click me!" handleChange={this.handleChange} />
-        <TargetDiv text={this.state.text} />
-        <TargetDivWithMap text={szoveg} />
-        <Profile />
-        <Profile2 />
-        <Profile3 />
-      </header>
+      <ButtonWithClass />
+      {/* <ButtonWithHook /> */}
     </div>
-    )
-  }
+  );
 }
 
 export default App;
